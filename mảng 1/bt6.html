@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="numV" placeholder="Nhập số bất kì (V)">
+    <button onclick="check()">Check</button>
+    <p id="result6"></p>
+    <script>
+        function check(){
+            const arr6=[5, 10, 15, 7, 9, 20, 12, 3, 8, 13]
+            let V= parseInt(document.getElementById("numV").value);
+            
+            if(arr6.includes(V)){
+                document.getElementById("result6").innerHTML="V is in the array"
+            }else{
+                document.getElementById("result6").innerHTML="V is not in the array"
+            }
+        }
+    </script>
+</body>
+</html>

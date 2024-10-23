@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result2"></p>
+    <script>
+        const arr2 = [5, 10, 15, 7, 9, 20, 12, 3, 8, 13];
+        let max=arr2[0];
+        let index=0;
+
+        for(let i=0; i<arr2.length; i++){
+            if(arr2[i] > max){
+                max=arr2[i];
+                index=i;
+            }
+        }
+        document.getElementById("result2").innerHTML="Số lớn nhất trong mảng "+ max + " và nằm ở vị trí thứ " + index 
+    </script>
+</body>
+</html>

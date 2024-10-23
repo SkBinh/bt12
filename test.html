@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Dash Between Even Numbers</title>
+</head>
+<body>
+    <h3>Nhập một số:</h3>
+    <input type="text" id="inputNumber" placeholder="Nhập số...">
+    <button onclick="insertDash()">Chèn dấu (-)</button>
+    <p id="result"></p>
+
+    <script>
+        function insertDash() {
+            let input = document.getElementById("inputNumber").value;
+            let result = '';
+
+            for (let i = 0; i < input.length; i++) {
+                result += input[i];
+                // Kiểm tra nếu số hiện tại và số tiếp theo đều là số chẵn
+                if (i < input.length - 1 && input[i] % 2 === 0 && input[i + 1] % 2 === 0) {
+                    result += '-';
+                }
+            }
+
+            document.getElementById("result").innerText = "Kết quả: " + result;
+        }
+    </script>
+</body>
+</html>

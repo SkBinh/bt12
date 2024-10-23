@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result9"></p>
+    <script>
+        const a = [5, 10, 15, 7, 9, 20, 12, 3, 8, 13];
+        const b = [-3, 1, 0, 2, 9, 11, 65, 22, 55, -8];
+        const c = a.concat(b);
+
+        let newC= c.slice().sort((a,b)=> a-b)
+
+        document.getElementById("result9").innerHTML=
+        "Mảng A ["+ a.join(", ") +"] <br>" + 
+        "Mảng B ["+ b.join(", ") +"] <br>" + 
+        "Mảng C sau khi gộp A và B ["+ c.join(", ") +"] <br>" + 
+        "Sau khi sắp xếp thứ tự <br>" +"["+ newC.join(", ") + "]";
+    </script>
+</body>
+</html>

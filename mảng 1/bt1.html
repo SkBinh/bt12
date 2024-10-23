@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result1"></p>
+    <script>
+        const arr1 = [5, 10, 15, 7, 9, 20, 12, 3, 8, 13];
+        let count=0;
+
+        for(let i=0; i<arr1.length; i++){
+            if(arr1[i] >= 10){
+                count++;
+            }
+        }
+        document.getElementById("result1").innerHTML="Có tổng "+ count + " số nguyên lớn hơn hoặc bằng 10";
+    </script>
+</body>
+</html>

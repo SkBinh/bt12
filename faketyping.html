@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Helloooo !!</h1>
+    <textarea cols="50" rows="10" id="inputTxt" placeholder="Nhập bất kì..."></textarea>
+    <script>
+        const txt= "Tôi là đồ ngốc !!"
+        let inputTxt= document.getElementById("inputTxt");
+        let char= 0;
+
+        inputTxt.addEventListener('keydown',(event) =>{
+            event.preventDefault();
+
+            if(char < txt.length){
+                inputTxt.value += txt[char];
+                char++;
+            }else if(char >= txt.length){
+                inputTxt.value = "";
+                char=0;           
+            }
+        }
+    ); 
+        
+    </script>
+</body>
+</html>

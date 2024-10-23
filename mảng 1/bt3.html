@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result3"></p>
+    <script>
+        const arr3 = [5, 10, 15, 7, 9, 20, 12, 3, 8, 13];
+        let max=arr3[0];
+        let index=0;
+        let sum=0;
+
+        for(let i=0; i<arr3.length; i++){
+            if(arr3[i] > max){
+                max=arr3[i];
+                index=i;
+            }
+            sum += arr3[i]
+        }        
+        let average= sum / arr3.length;
+        document.getElementById("result3").innerHTML="Số lớn nhất trong mảng "+ max + " và tổng số trung bình = " + average
+    </script>
+</body>
+</html>
