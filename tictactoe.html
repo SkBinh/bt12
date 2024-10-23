@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,4 +85,92 @@
             alert("Vị trí không hợp lệ! Vui lòng nhập lại.");
         }
     }
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  
+</style>
+<body>
+    <h2>Tic Tac Toe</h2>
+    <p id="tictactoe"></p>
+    <p id="currentPlayer">Người chơi hiện tại: <span id="player">X</span></p>
+    <input type="button" onclick="changeValue()" value="Change Value">
+
+</body>
+</html>
+<script>
+    let a= document.getElementById("tictactoe");
+    let currentPlayerDisplay = document.getElementById("player");
+    let board=[];
+    let data="";
+    let currentPlayer= "X";
+    let gameOver= false;
+
+        for(let i=0; i<5; i++){
+            board[i]= new Array('.','.','.','.','.')
+        }
+
+    function drawBoard(){
+        data="";
+        for(let i=0; i<5; i++){
+            data += "<br><br>";
+            for(let j=0; j<5; j++){
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        a.innerHTML="<hr>" + data;
+    }
+    drawBoard();
+
+    function checkWin(player){
+        for(let i=0; i<5; i++){
+            for(let j=0; j<3; j++){
+                if (board[i][j] === player && board[i][j+1] === player && board[i][j+2] === player) {
+                    return true;
+                }
+            }
+        }
+        for(let j=0; j<5; j++){
+            for(let i=0; i<3; i++){
+                if(board[i][j] === player && board[i+1][j] === player && board[i+2][j] === player) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    function changeValue(){
+        if(gameOver){
+            alert("Trò chơi kết thúc");
+            return;
+        }
+
+        let positionX= prompt("X: ");
+        let positionY= prompt("Y: ");
+        if (positionX >= 0 && positionX < 5 && positionY >= 0 && positionY < 5) {
+                if (board[positionX][positionY] === '.') {
+                    board[positionX][positionY] = currentPlayer;
+                    drawBoard();
+                    if(checkWin(currentPlayer)){
+                        alert("Người chơi " + currentPlayer + " đã thắng !!");
+                        gameOver=true;
+                        return;
+                    }                   
+                    currentPlayer= (currentPlayer === "X") ? "O" : "X";
+                    currentPlayerDisplay.textContent = currentPlayer;
+                }else{
+                    alert("Ô đã được đánh dấu !!");
+                }
+        }else{
+            alert("Vị trí không hợp lệ! Vui lòng nhập lại.");
+        }
+    }
+>>>>>>> bf1699471e44e636e0b49c1caf89e7aa5d04dd2d
 </script>

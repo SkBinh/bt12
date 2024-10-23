@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,4 +23,30 @@
         }       
     }
     document.body.innerHTML += "<p>Kết quả: " + output + "</p>";
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let input= prompt("Nhập bất kì: ");
+    let output="";
+
+    for(let i=0 ; i < input.length ; i++){
+        let char = input[i];
+        if(char >= 'a' && char <= 'z'){
+            output+= char.toUpperCase();
+        }else{
+            output+= char.toLowerCase();
+        }       
+    }
+    document.body.innerHTML += "<p>Kết quả: " + output + "</p>";
+>>>>>>> bf1699471e44e636e0b49c1caf89e7aa5d04dd2d
 </script>
