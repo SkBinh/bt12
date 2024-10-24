@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtValue" placeholder="Nhập mảng bất kì">
+    <button type="button" onclick="check()">Check</button>
+    <p id="result4"></p>
+
+    <script>
+        function check(){
+        let input= document.getElementById("txtValue").value;
+        let countNum= 0;
+        for(let i=0; i<input.length; i++){
+            if(!isNaN(input[i]) && input[i] !== " "){
+                countNum++;
+            }
+        }
+
+        document.getElementById("result4").innerHTML="Số lượng số trong mảng là: "+ countNum;
+    }
+    </script>
+</body>
+</html>

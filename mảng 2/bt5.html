@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtValue1" placeholder="Nhập mảng bất kì">
+    <input type="text" id="txtValue2" placeholder="Nhập mảng bất kì">
+    <button type="button" onclick="check()">Check</button>
+    <p id="result5"></p>
+
+    <script>
+        function check(){
+            let arr1= document.getElementById("txtValue1").value;
+            let arr2= document.getElementById("txtValue2").value;
+                    
+            document.getElementById("result5").innerHTML= arr1 === arr2 ? "2 mảng giống nhau":"2 mảng khác nhau";         
+        }
+    </script>
+</body>
+</html>
